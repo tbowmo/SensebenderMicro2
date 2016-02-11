@@ -1,0 +1,45 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-09 BZR 5648)-product   date = tir 04 aug 2015 22:38:05 CEST
+
+BeginCmp
+TimeStamp = /55BFB0F1;
+Reference = P1;
+ValeurCmp = Debug;
+IdModule  = mysensors_connectors:Cortex_M_Debug_Connector;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C122DF;
+Reference = P2;
+ValeurCmp = MYSX_1.2;
+IdModule  = mysensors_connectors:MYSX_1.2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BFAAB1;
+Reference = U1;
+ValeurCmp = SAMD20E15A-A;
+IdModule  = Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BFB344;
+Reference = U2;
+ValeurCmp = AP1117D33;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C100D1;
+Reference = U3;
+ValeurCmp = NRF24L01;
+IdModule  = mysensors_radios:NRF24L01;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C1045B;
+Reference = U4;
+ValeurCmp = RFM69HW;
+IdModule  = mysensors_radios:RFM69HW_SMD_Handsoldering;
+EndCmp
+
+EndListe
