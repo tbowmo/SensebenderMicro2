@@ -1,6 +1,6 @@
 (export (version D)
   (design
-    (source /home/thomas/Projects/kicad/MysensorsMicro2/MysensorsMicro2.sch)
+    (source /home/thomas/Projects/kicad/SensebenderMicro2/SensebenderMicro2.sch)
     (date "fre 12 feb 2016 23:59:12 CET")
     (tool "Eeschema 4.0.1-3.201512221401+6198~38~ubuntu15.10.1-stable")
     (sheet (number 1) (name /) (tstamps /)
@@ -9,7 +9,7 @@
         (company Mysensors.org)
         (rev 0.1)
         (date)
-        (source MysensorsMicro2.sch)
+        (source SensebenderMicro2.sch)
         (comment (number 1) (value "Created by Thomas B. Mørch"))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))

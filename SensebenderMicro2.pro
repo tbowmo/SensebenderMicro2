@@ -29,7 +29,7 @@ version=1
 version=1
 LibDir=$(MYSLOCAL)/mysensors_symbols
 [eeschema/libraries]
-LibName1=MysensorsMicro2-rescue
+LibName1=SensebenderMicro2-rescue
 LibName2=power
 LibName3=device
 LibName4=transistors
