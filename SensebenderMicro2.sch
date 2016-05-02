@@ -747,23 +747,23 @@ $EndComp
 $Comp
 L C C8
 U 1 1 56BA7943
-P 10300 5900
-F 0 "C8" H 10325 6000 50  0000 L CNN
-F 1 "100nF" H 10325 5800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 10338 5750 50  0001 C CNN
-F 3 "" H 10300 5900 50  0000 C CNN
-	1    10300 5900
+P 10550 5300
+F 0 "C8" H 10575 5400 50  0000 L CNN
+F 1 "100nF" H 10575 5200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10588 5150 50  0001 C CNN
+F 3 "" H 10550 5300 50  0000 C CNN
+	1    10550 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR029
 U 1 1 56BA7B39
-P 10300 6050
-F 0 "#PWR029" H 10300 5800 50  0001 C CNN
-F 1 "GND" H 10300 5900 50  0000 C CNN
-F 2 "" H 10300 6050 50  0000 C CNN
-F 3 "" H 10300 6050 50  0000 C CNN
-	1    10300 6050
+P 10550 5450
+F 0 "#PWR029" H 10550 5200 50  0001 C CNN
+F 1 "GND" H 10550 5300 50  0000 C CNN
+F 2 "" H 10550 5450 50  0000 C CNN
+F 3 "" H 10550 5450 50  0000 C CNN
+	1    10550 5450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1487,7 +1487,7 @@ F1 54 95 14 9F EF 69 AF 2F E5 68 0C 80 4D C9 83 B8 C7 32 D7 FA 45 6F 95 BF E8 F3
 88 3B 00 28 44 DC 01 40 21 E2 0E 00 0A 11 77 00 50 88 B8 03 80 42 C4 1D 00 14 22 EE 00 A0 10 71 
 07 00 85 88 3B 00 28 44 DC 01 40 21 E2 0E 00 0A 11 77 00 50 88 B8 03 80 42 C4 1D 00 14 22 EE 00 
 A0 10 71 07 00 85 88 3B 00 28 F4 2F 6E 0E 73 66 69 F5 31 42 00 00 00 00 49 45 4E 44 AE 42 60 82 
-78 
+B0 
 EndData
 $EndBitmap
 $Comp
@@ -1796,8 +1796,6 @@ Wire Notes Line
 Wire Wire Line
 	10300 5600 10150 5600
 Wire Wire Line
-	10300 5200 10300 5750
-Wire Wire Line
 	2850 2800 2950 2800
 Connection ~ 2950 2800
 Wire Wire Line
@@ -1826,7 +1824,6 @@ Wire Wire Line
 Wire Wire Line
 	8850 5200 9650 5200
 Connection ~ 8850 5600
-Connection ~ 10300 5600
 Wire Wire Line
 	6400 5850 5700 5850
 Wire Wire Line
@@ -1860,4 +1857,10 @@ Wire Wire Line
 Connection ~ 6050 5850
 Text Notes 6500 5900 0    60   ~ 0
 Q1 opens when Gate is held low. \nSo we have a resistor pulling the \ngate high, to disable the radio by\ndefault.\n\nIf we had the resistor to gnd, and \nhus have the radio to be default on,\nwe had to take the current draw through\nR7 into account, whenever we wanted to\npower down the radios.
+Wire Wire Line
+	10300 5200 10300 5600
+Wire Wire Line
+	9900 5050 10550 5050
+Wire Wire Line
+	10550 5050 10550 5150
 $EndSCHEMATC
