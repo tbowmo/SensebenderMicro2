@@ -232,17 +232,6 @@ V_RAW
 Text Label 8800 4150 2    60   ~ 0
 V_RAW
 $Comp
-L ATSAMD21E U1
-U 1 1 56B7791C
-P 2750 4700
-F 0 "U1" H 2950 6200 60  0000 C CNN
-F 1 "ATSAMD21E" V 2750 4500 60  0000 C CNN
-F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 1950 3250 60  0001 C CNN
-F 3 "" H 1950 3250 60  0000 C CNN
-	1    2750 4700
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C1
 U 1 1 56B78760
 P 3800 3150
@@ -511,8 +500,6 @@ F 3 "" H 10400 3250 60  0000 C CNN
 	1    10400 3250
 	1    0    0    -1  
 $EndComp
-Text Label 3600 4450 0    60   ~ 0
-SECURITY
 Text Label 9850 3250 2    60   ~ 0
 SECURITY
 $Comp
@@ -567,7 +554,7 @@ F 3 "" H 4700 1250 50  0000 C CNN
 	1    4700 1250
 	1    0    0    -1  
 $EndComp
-Text Label 3600 4750 0    60   ~ 0
+Text Label 3600 4850 0    60   ~ 0
 FLS_CS
 $Comp
 L Si7021 U7
@@ -731,8 +718,6 @@ F 3 "" H 2550 2450 50  0000 C CNN
 	1    2550 2450
 	-1   0    0    1   
 $EndComp
-Text Label 3600 4850 0    60   ~ 0
-BOOTMODE
 $Comp
 L GND #PWR028
 U 1 1 56BA456E
@@ -788,13 +773,12 @@ F 3 "" H 8850 6050 50  0000 C CNN
 	1    8850 6050
 	1    0    0    -1  
 $EndComp
-Text Label 3600 4350 0    60   ~ 0
+Text Label 3600 4450 0    60   ~ 0
 NRF_CE
 NoConn ~ 9100 1500
 NoConn ~ 9100 1600
 NoConn ~ 9100 1700
 NoConn ~ 9100 1800
-NoConn ~ 9100 1900
 NoConn ~ 8000 2050
 $Comp
 L C C9
@@ -817,17 +801,6 @@ F 2 "" H 8900 950 50  0000 C CNN
 F 3 "" H 8900 950 50  0000 C CNN
 	1    8900 950 
 	-1   0    0    1   
-$EndComp
-$Comp
-L TEST_1P W1
-U 1 1 56BC6E9C
-P 4950 4850
-F 0 "W1" H 4950 5120 50  0000 C CNN
-F 1 "BOOTL" H 4950 5050 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5150 4850 50  0001 C CNN
-F 3 "" H 5150 4850 50  0000 C CNN
-	1    4950 4850
-	1    0    0    -1  
 $EndComp
 Text Notes 9050 700  0    60   ~ 0
 Radios
@@ -1487,7 +1460,7 @@ F1 54 95 14 9F EF 69 AF 2F E5 68 0C 80 4D C9 83 B8 C7 32 D7 FA 45 6F 95 BF E8 F3
 88 3B 00 28 44 DC 01 40 21 E2 0E 00 0A 11 77 00 50 88 B8 03 80 42 C4 1D 00 14 22 EE 00 A0 10 71 
 07 00 85 88 3B 00 28 44 DC 01 40 21 E2 0E 00 0A 11 77 00 50 88 B8 03 80 42 C4 1D 00 14 22 EE 00 
 A0 10 71 07 00 85 88 3B 00 28 F4 2F 6E 0E 73 66 69 F5 31 42 00 00 00 00 49 45 4E 44 AE 42 60 82 
-B0 
+78 
 EndData
 $EndBitmap
 $Comp
@@ -1657,7 +1630,6 @@ F 3 "" H 10200 2900 50  0000 C CNN
 	1    10200 2900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3600 5750
 $Comp
 L R R6
 U 1 1 57279B05
@@ -1755,8 +1727,6 @@ Wire Wire Line
 	2550 2500 2550 2450
 Wire Wire Line
 	2300 2500 2850 2500
-Wire Wire Line
-	3600 4850 4950 4850
 Wire Wire Line
 	4700 6100 4700 6050
 Wire Wire Line
@@ -1856,11 +1826,57 @@ Wire Wire Line
 	6050 5800 6050 5850
 Connection ~ 6050 5850
 Text Notes 6500 5900 0    60   ~ 0
-Q1 opens when Gate is held low. \nSo we have a resistor pulling the \ngate high, to disable the radio by\ndefault.\n\nIf we had the resistor to gnd, and \nhus have the radio to be default on,\nwe had to take the current draw through\nR7 into account, whenever we wanted to\npower down the radios.
+Q1 opens when Gate is held low. \nSo we have a resistor pulling the \ngate high, to disable the radio by\ndefault.\n\nIf we had the resistor to gnd, and \nthus have the radio to be default on,\nwe had to take the current draw through\nR7 into account, whenever we wanted to\npower down the radios.
 Wire Wire Line
 	10300 5200 10300 5600
 Wire Wire Line
 	9900 5050 10550 5050
 Wire Wire Line
 	10550 5050 10550 5150
+$Comp
+L CP C11
+U 1 1 5761A4FA
+P 9750 1050
+F 0 "C11" V 9495 1050 50  0000 C CNN
+F 1 "4,7uF" V 9586 1050 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 9788 900 50  0001 C CNN
+F 3 "" H 9750 1050 50  0000 C CNN
+	1    9750 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9900 1050 10000 1050
+Connection ~ 10000 1050
+$Comp
+L GND #PWR041
+U 1 1 5761A76F
+P 9600 1100
+F 0 "#PWR041" H 9600 850 50  0001 C CNN
+F 1 "GND" H 9605 927 50  0000 C CNN
+F 2 "" H 9600 1100 50  0000 C CNN
+F 3 "" H 9600 1100 50  0000 C CNN
+	1    9600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1100 9600 1050
+Text Label 3600 4750 0    60   ~ 0
+SECURITY
+$Comp
+L ATSAMD21E U1
+U 1 1 56B7791C
+P 2750 4700
+F 0 "U1" H 2950 6200 60  0000 C CNN
+F 1 "ATSAMD21E" V 2750 4500 60  0000 C CNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 1950 3250 60  0001 C CNN
+F 3 "" H 1950 3250 60  0000 C CNN
+	1    2750 4700
+	1    0    0    -1  
+$EndComp
+Text Label 9100 1900 0    60   ~ 0
+RFM_DIO5
+Text Label 3600 4350 0    60   ~ 0
+RFM_RESET
+Text Label 3600 5750 0    60   ~ 0
+RFM_DIO5
 $EndSCHEMATC
