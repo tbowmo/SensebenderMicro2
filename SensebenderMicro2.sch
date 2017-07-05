@@ -123,7 +123,7 @@ F 3 "" H 2950 2500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L RFM69HW U4
+L RFM95HW U4
 U 1 1 55C1045B
 P 8550 1400
 F 0 "U4" H 8200 1650 40  0000 C CNN
@@ -718,7 +718,6 @@ NoConn ~ 9100 1500
 NoConn ~ 9100 1600
 NoConn ~ 9100 1700
 NoConn ~ 9100 1800
-NoConn ~ 8000 2050
 $Comp
 L C C9
 U 1 1 56BC6510
@@ -1885,4 +1884,6 @@ Wire Wire Line
 	9600 800  9550 800 
 Wire Wire Line
 	9550 800  9550 1050
+Text Label 7800 1250 0    60   ~ 0
+ANT
 $EndSCHEMATC
